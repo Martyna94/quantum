@@ -10,7 +10,7 @@ job = qiskit.execute(program, qiskit.BasicAer.get_backend('qasm_simulator'))
 
 print(job.result().get_counts())
 
-qiskit.IBMQ.load_accounts()
+qiskit.IBMQ.load_account()
 backend = qiskit.providers.ibmq.least_busy(qiskit.IBMQ.backends(simulator=False))
 print("We'll use the least busy device:", backend.name())
 job = qiskit.execute(program, backend)
